@@ -1,0 +1,73 @@
+const movies=[
+    {
+        id:1,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABReb4-YfHiPmPE0KgVjJnc36JYve1w5QXNFFDR6kUfQxRfpIB78con44cVmfhP7L-fL7QeJJ62nruRNd1-DTjM2FYvdcO2bJXrQ.jpg?r=d58",
+        title:"Morbius",
+        language:"english",
+        cost:350,
+    },
+    {
+        id:2,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXd3BTPaTi4ZhVQk0mT2vklFjvJ-bSdDyVDCYjm8FGS9UajG9bxqIODxhDArNkIx-jYu07hkeyNNk4RHDatq-lCddSVYYp2pfVISDQicITt7uNI2d83tLRaHavFpVT7apY_ULwosACB5q3wOPgMkfIOTRvGeIwrWLIbno_owfcjhu7fFvIexo6wwlLrtdeaRnegWPiJ8wTqpjCvhb9yh4LWxn6s9r3Och8GJ7jjLsBEyDgBkPEqt9lNb97xeGrhSgxsCrNdKiCBBRJRG9Z9_Xs8--UfANhRF_ZDRGyBFPLjoaP4UYUJjCQz0cTAxNrJwALC6YQJCx6SWiS2UOgxTxHc.jpg?r=867",
+        title:"It ends with us",
+        language:"english",
+        cost:250,
+    },
+    {
+        id:3,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVYhgxSjU45RUxjbZYw7dvoZtejZTjJsTXldOrNWRiyr8f1CmuoOxj7PRzrDlJVZnGcmwfJertlB22sVASRES6OsNBQ56G8qPPtHjKe-_zO8tZqJWGLo3sNd2mBC-XVWM4XocygHXWk_sNVPJ2iDFFZFMn8szTvV9Njf8XWSIs44t95vYAK2hQUprgWTLsNNGxloroUV7A8SSqRaCxAYLIp55Ah9xrttMv_QveBpugxR0MyipsFj6LvLAZ7IiZ3SPgxbbE0tNN2PYtXZIDp4YY1M4wk5nK-lS4y-B0kpViKLYAb7nTz9SCowmhj_1sGf07ttluwfVt8tCRs74WvSaNw.jpg?r=885",
+        title:"The Bunkinghum Murders",
+        language:"hindi",
+        cost:200,
+    },
+    {
+        id:4,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe-zc6aLy7jK7f9D__eWspDRRXxhCtYcBApMOXrMa0mNU7GV9zY1nH3ghAZe6BObNWNt6E55BM5SpcLZD1wCdG3LmhVS9fM8BCumXF9q2IDiUEO5-iZp0My8-_UpJU_nb2XbEJCiebgP6r-nQUvE0K0AhzURZ4lDJkk.jpg?r=941",
+        language:"hindi",
+        title:"khel khel mein",
+        cost:150,
+    },
+    {
+        id:5,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABRhybUqTpg08T8TnfSlW1TPvVx4rMoeyARJusNHmFijC4KWeaoSl9QSkEFSlLFXCZC4pITSugdJhfWa1jkM8Ina1EMepcEIntBvhg4f1kvs3f51AEJbfEFSx6B718Jng8r3j.jpg?r=e0f",
+        language:"english",
+        title:"Damsel",
+        cost:350,
+    },
+    {
+        id:6,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbr_VIfg3BD0gVcgUyfGCKxnPIgSeiAkThrhmXHrLu0hz4jAiBocik0A71-EBfFH6CtJVAwcifC6eQWOkh4_YhRGdA1kHghVyv4.jpg?r=c5e",
+        language:"english",
+        title:"The meg",
+        cost:200,
+    },
+    {
+        id:7,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe_6EGL67Fvzl-AFMRQo3eMtMocHNb5ygksUrWiVvza5y8q-QdLPVe3l0lHMprmsPlXwqBHoGIjUuMhapKvqq32TeM5umJkROF_AFb8CWMPHkFCbeuYaBj2CnbsHDE7P2lqbxu-ibWT4Sh9uww5b-dPt4OZU5GwQ8CcTjLj5Wi9na97v3x3XDyo4UbNxCjyYDA9tHhzZr8o0mNz6qAhYH_Zm_T3xUP1sKRKePq1iGKSbdAok0oo0QWGe3Z89b0zRfPQRUq0_-HLRaMKMwx2Im4LCIkRAqXh9OP6HUBTlXHP0o6kOvzcr6dtIM94ZT6ti7_Jy7iNzCvyt0fEhoBYbLf2zErRrRx60COGezH31w6gKVdpRqHM.jpg?r=b01",
+        language:"hindi",
+        title:"do patti",
+        cost:150,
+    },
+    {
+        id:8,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe_6EGL67Fvzl-AFMRQo3eMtMocHNb5ygksUrWiVvza5y8q-QdLPVe3l0lHMprmsPlXwqBHoGIjUuMhapKvqq32TeM5umJkROF_AFb8CWMPHkFCbeuYaBj2CnbsHDE7P2lqbxu-ibWT4Sh9uww5b-dPt4OZU5GwQ8CcTjLj5Wi9na97v3x3XDyo4UbNxCjyYDA9tHhzZr8o0mNz6qAhYH_Zm_T3xUP1sKRKePq1iGKSbdAok0oo0QWGe3Z89b0zRfPQRUq0_-HLRaMKMwx2Im4LCIkRAqXh9OP6HUBTlXHP0o6kOvzcr6dtIM94ZT6ti7_Jy7iNzCvyt0fEhoBYbLf2zErRrRx60COGezH31w6gKVdpRqHM.jpg?r=b01",
+        language:"hindi",
+        title:"khel khel mein",
+        cost:150,
+    },
+    {
+        id:9,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe_6EGL67Fvzl-AFMRQo3eMtMocHNb5ygksUrWiVvza5y8q-QdLPVe3l0lHMprmsPlXwqBHoGIjUuMhapKvqq32TeM5umJkROF_AFb8CWMPHkFCbeuYaBj2CnbsHDE7P2lqbxu-ibWT4Sh9uww5b-dPt4OZU5GwQ8CcTjLj5Wi9na97v3x3XDyo4UbNxCjyYDA9tHhzZr8o0mNz6qAhYH_Zm_T3xUP1sKRKePq1iGKSbdAok0oo0QWGe3Z89b0zRfPQRUq0_-HLRaMKMwx2Im4LCIkRAqXh9OP6HUBTlXHP0o6kOvzcr6dtIM94ZT6ti7_Jy7iNzCvyt0fEhoBYbLf2zErRrRx60COGezH31w6gKVdpRqHM.jpg?r=b01",
+        language:"hindi",
+        title:"khel khel mein",
+        cost:150,
+    },
+    {
+        id:10,
+        image:"https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe_6EGL67Fvzl-AFMRQo3eMtMocHNb5ygksUrWiVvza5y8q-QdLPVe3l0lHMprmsPlXwqBHoGIjUuMhapKvqq32TeM5umJkROF_AFb8CWMPHkFCbeuYaBj2CnbsHDE7P2lqbxu-ibWT4Sh9uww5b-dPt4OZU5GwQ8CcTjLj5Wi9na97v3x3XDyo4UbNxCjyYDA9tHhzZr8o0mNz6qAhYH_Zm_T3xUP1sKRKePq1iGKSbdAok0oo0QWGe3Z89b0zRfPQRUq0_-HLRaMKMwx2Im4LCIkRAqXh9OP6HUBTlXHP0o6kOvzcr6dtIM94ZT6ti7_Jy7iNzCvyt0fEhoBYbLf2zErRrRx60COGezH31w6gKVdpRqHM.jpg?r=b01",
+        language:"hindi",
+        title:"khel khel mein",
+        cost:150,
+    },
+];
+export default movies;
